@@ -2,208 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassmorphism CSS</title>
+    <title>glassmorphism-1</title>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
-
-body 
-{
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to right, #3f5efb, #fc466b);
-}
-.container
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-form
-{
-    background: rgba(255,255,255, 0.06);
-    padding: 3em;
-    height: 320px;
-    border-radius: 20px;
-    border-left: 1px solid rgba(255,255,255, 0.3);
-    border-top: 1px solid rgba(255,255,255, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0, 0.2);
-    text-align: center;
-    position: relative;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-form p
-{
-    font-weight: 500;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0,0,0, 0.2);
-}
-form a
-{
-    text-decoration: none;
-    color: #ddd;
-    font-size: 12px;
-}
-form a:hover
-{
-    text-shadow: 2px 2px 6px #00000040;
-}
-form a:active
-{
-    text-shadow: none
-}
-form input
-{
-    background: transparent;
-    width: 200px;
-    padding: 1em;
-    margin-bottom: 2em;
-    border: none;
-    border-left: 1px solid rgba(255,255,255, 0.3);
-    border-top: 1px solid rgba(255,255,255, 0.3);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    box-shadow: 4px 4px 60px rgba(0,0,0, 0.2);
-    color: #fff;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    text-shadow: 2px 2px 4px rgba(0,0,0, 0.2);
-    border-radius: 5000px;
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
-form input:hover
-{
-    background: rgba(255,255,255, 0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0, 0.2);
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #091921;
 }
-form input[type="email"]:focus,
-form input[type="password"]:focus
-{
-    background: rgba(255,255,255, 0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0, 0.2);   
-}
-form input[type="button"]
-{
-    margin-top: 10px;
-    width: 150px;
-    font-size: 1rem;
-}
-form input[type="button"]:hover
-{
-    cursor: pointer;
-}
-form:hover
-{
-    margin: 4px;
-}
-
-::placeholder
-{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0, 0.4);
-}
-::-webkit-input-placeholder
-{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0, 0.4);
-}
-a,
-input:focus,
-button:focus,
-select:focus
-{
-    outline: none;
-}
-.drop
-{
-    background: rgba(255,255,255, 0.06);
-    -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+body::before {
+  content: "";
   position: absolute;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e91e63, #ffc107);
+  clip-path: circle(22% at 30% 20%);
 }
-.drop-1
-{
-    height: 80px;
-    width: 80px;
-    top: -20px;
-    left: -40px;
-    z-index: -1;
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ffffff, #da00ff);
+  clip-path: circle(20% at 70% 90%);
 }
-.drop-2
-{
-    height: 80px;
-    width: 80px;
-    bottom: -30px;
-    right: -10px;
+body .container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
-.drop-3
-{
-    height: 100px;
-    width: 100px;
-    bottom: 120px;
-    right: -50px;
-    z-index: -1;
+body .container .calculator {
+  position: relative;
+  display: grid;
 }
-
-.drop-4
-{
-    height: 120px;
-    width: 120px;
-    top: -60px;
-    right: -60px;
+body .container .calculator .value {
+  grid-column: span 4;
+  height: 140px;
+  width: 300px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 30px;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  resize: none;
 }
-.drop-5
-{
-    height: 60px;
-    width: 60px;
-    bottom: 170px;
-    left: 90px;
-    z-index: -1;
+body .container .calculator span {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 75px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
-</style>   
+body .container .calculator span.clear {
+  grid-column: span 2;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.05);
+}
+body .container .calculator span.plus {
+  grid-row: span 2;
+  height: 150px;
+}
+body .container .calculator span.equal {
+  background: rgba(255, 255, 255, 0.05);
+}
+body .container .calculator span:hover {
+  transition: 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+body .container .calculator span:active {
+  background: #14ff47;
+  color: #192f00;
+  font-size: 24px;
+  font-weight: 500;
+}    
+</style>    
 </head>
 <body>
-<div class="container">
-    <form>
-        <p>Welcome</p>
-        <input type="email" placeholder="Email"><br>
-        <input type="password" placeholder="Password"><br>
-        <input type="button" value="Sign in"><br>
-        <a href="#">Forgot Password?</a>
-    </form>
+    <div class="container">
+        <form class="calculator" name="calc">
+          <!--     <input type="text" readonly class="value" name="txt"> -->
+          <textarea name="txt" readonly class="value" rows="3"></textarea>
+          <span class="num clear" onclick="calc.txt.value = ''">c</span>
+          <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+          <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+          <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+          <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+          <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+          <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+          <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+          <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+          <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+          <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+          <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+          <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+          <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+          <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+          <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+          <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+          <span class="num equal" onclick="document.calc.txt.value =eval(calc.txt.value)">=</span>
+        </form>
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+VanillaTilt.init(document.querySelector(".container"), {
+  max: 15,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.2
+});
 
-    <div class="drops">
-        <div class="drop drop-1"></div>
-        <div class="drop drop-2"></div>
-        <div class="drop drop-3"></div>
-        <div class="drop drop-4"></div>
-        <div class="drop drop-5"></div>
-    </div>
-
-</div>
-
-
+</script>       
 </body>
 </html>
